@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nike — Just Do It</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="staily.css">
 </head>
 <body>
 
     <header>
         <!-- Button that triggers the menu icon animation -->
-        <button id="icon">
+        <button id="icon" aria-label="Toggle navigation menu">
             <div id="cont_icons">
                 <!-- Three div elements representing the animated menu icon -->
                 <div id="icon_1"></div>
@@ -18,9 +21,11 @@
                 <div id="icon_3"></div>
             </div>
         </button>
-        
+
+        <div id="brand"><span>N</span>IKE.</div>
+
         <!-- Navigation menu container -->
-        <div id="menu">
+        <nav id="menu">
             <div id="menu_item_1">
                 <!-- Navigation links to different sections of the page -->
                 <a href="#" class="link font-1">Home</a>
@@ -28,113 +33,130 @@
                 <a href="#section3" class="link font-1">Services</a>
                 <a href="#footer" class="link font-1">Contact</a>
             </div>
-        </div>
+        </nav>
     </header>
-    
+
     <main>
         <section id="section1">
             <div>
                 <!-- Section containing information about Nike -->
+                <span class="eyebrow">Est. 1964</span>
                 <h1>About Nike</h1>
                 <p>
-                    Nike is an American multinational corporation specializing in the design, 
-                    manufacturing, and marketing of footwear, apparel, and sports equipment. 
-                    It was founded in 1964 by Phil Knight and Bill Bowerman under the name 
+                    Nike is an American multinational corporation specializing in the design,
+                    manufacturing, and marketing of footwear, apparel, and sports equipment.
+                    It was founded in 1964 by Phil Knight and Bill Bowerman under the name
                     Blue Ribbon Sports before rebranding as Nike Inc. in 1971.
-    
-                    Nike is famous for its iconic "Swoosh" logo and the slogan "Just Do It." 
-                    As one of the world's largest sportswear brands, Nike provides innovative 
+
+                    Nike is famous for its iconic "Swoosh" logo and the slogan "Just Do It."
+                    As one of the world's largest sportswear brands, Nike provides innovative
                     products for both professional athletes and casual sports enthusiasts.
-    
-                    The company sponsors top athletes and teams worldwide, including Cristiano 
-                    Ronaldo, LeBron James, and Kylian Mbappé. It also owns popular sub-brands 
+
+                    The company sponsors top athletes and teams worldwide, including Cristiano
+                    Ronaldo, LeBron James, and Kylian Mbappé. It also owns popular sub-brands
                     such as Converse and Jordan Brand.
-    
-                    Nike is committed to innovation in sportswear, utilizing advanced 
+
+                    Nike is committed to innovation in sportswear, utilizing advanced
                     technologies like Nike Air, Flyknit, and React to enhance performance and comfort.
                 </p>
-                <h2>Nike is more than just a brand—it’s a lifestyle</h2>
+                <h2>Nike is more than just a brand—it's a lifestyle</h2>
+                <a href="#section3" class="hero-cta">See the services →</a>
             </div>
         </section>
-    
-        <section id="section2">
+
+        <!-- Signature ticker -->
+        <div class="ticker" aria-hidden="true">
+            <div class="ticker-track">
+                <span>Just Do It</span><span>Just Do It</span><span>Just Do It</span><span>Just Do It</span>
+                <span>Just Do It</span><span>Just Do It</span><span>Just Do It</span><span>Just Do It</span>
+            </div>
+        </div>
+
+        <section id="section2" aria-label="Product gallery">
+            <div class="section-heading">
+                <span class="eyebrow">Gear in motion</span>
+                <h2>The lineup, on a loop</h2>
+            </div>
             <!-- Container for displaying images -->
-            <div class="image-container"></div>
+            <div class="marquee-wrap">
+                <div class="image-container"></div>
+            </div>
         </section>
-    
+
         <section id="section3">
             <!-- Section showcasing available services by js-->
+            <span class="eyebrow">What we offer</span>
             <h1>Services</h1>
             <div class="service-container"></div>
-        </section>        
+        </section>
     </main>
-    
+
     <footer id="footer">
         <div class="container">
-            <div class="flex">
+            <div class="footer-grid">
                 <!-- About Us Section -->
-                <div class="w-full md:w-1/4 mb-6 md:mb-0">
-                    <h2 class="text-xl font-bold mb-4">About Us</h2>
-                    <p class="text-gray-400">We are a leading company in providing the best services and products to our customers. Our mission is to deliver excellence in every aspect of our business.</p>
+                <div class="footer-col">
+                    <h2>About Us</h2>
+                    <p>We are a leading company in providing the best services and products to our customers. Our mission is to deliver excellence in every aspect of our business.</p>
                 </div>
 
                 <!-- Quick Links Section -->
-                <div class="w-full md:w-1/4 mb-6 md:mb-0">
-                    <h2 class="text-xl font-bold mb-4">Quick Links</h2>
+                <div class="footer-col">
+                    <h2>Quick Links</h2>
                     <ul>
-                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
-                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">About</a></li>
-                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Services</a></li>
-                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#section1">About</a></li>
+                        <li><a href="#section3">Services</a></li>
+                        <li><a href="#footer">Contact</a></li>
                     </ul>
                 </div>
 
                 <!-- Latest News Section -->
-                <div class="w-full md:w-1/4 mb-6 md:mb-0">
-                    <h2 class="text-xl font-bold mb-4">Latest News</h2>
+                <div class="footer-col">
+                    <h2>Latest News</h2>
                     <ul>
-                        <li class="mb-2">
-                            <a href="#" class="text-gray-400 hover:text-white">New product launch</a>
-                            <p class="text-gray-500 text-sm">March 10, 2025</p>
+                        <li>
+                            <a href="#">New product launch</a>
+                            <p class="news-date">March 10, 2025</p>
                         </li>
-                        <li class="mb-2">
-                            <a href="#" class="text-gray-400 hover:text-white">Upcoming event</a>
-                            <p class="text-gray-500 text-sm">April 15, 2025</p>
+                        <li>
+                            <a href="#">Upcoming event</a>
+                            <p class="news-date">April 15, 2025</p>
                         </li>
-                        <li class="mb-2">
-                            <a href="#" class="text-gray-400 hover:text-white">Company milestone</a>
-                            <p class="text-gray-500 text-sm">May 20, 2025</p>
+                        <li>
+                            <a href="#">Company milestone</a>
+                            <p class="news-date">May 20, 2025</p>
                         </li>
                     </ul>
                 </div>
 
                 <!-- Contact Us Section -->
-                <div class="w-full md:w-1/4 mb-6 md:mb-0">
-                    <h2 class="text-xl font-bold mb-4">Contact Us</h2>
-                    <p class="text-gray-400 mb-2"><i class="fas fa-map-marker-alt mr-2"></i>1234 Street Name, City, Country</p>
-                    <p class="text-gray-400 mb-2"><i class="fas fa-phone-alt mr-2"></i>+123 456 7890</p>
-                    <p class="text-gray-400 mb-2"><i class="fas fa-envelope mr-2"></i>info@example.com</p>
+                <div class="footer-col">
+                    <h2>Contact Us</h2>
+                    <p>1234 Street Name, City, Country</p>
+                    <p>+123 456 7890</p>
+                    <p>info@example.com</p>
                 </div>
             </div>
 
-            <div class="flex justify-between items-center mt-8">
+            <div class="footer-bottom">
                 <!-- Social Media Links -->
-                <div>
-                    <a href="#" class="text-gray-400 hover:text-white mr-4"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-white mr-4"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-white mr-4"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">f</a>
+                    <a href="#" aria-label="Twitter">x</a>
+                    <a href="#" aria-label="Instagram">ig</a>
+                    <a href="#" aria-label="LinkedIn">in</a>
                 </div>
 
                 <!-- Copyright -->
-                <div class="text-gray-400">
+                <div class="copyright">
                     &copy; 2025 Your Company. All rights reserved.
                 </div>
             </div>
         </div>
 
     </footer>
-    
+
     <script src="script.js"></script>
 </body>
 </html>
